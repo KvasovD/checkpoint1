@@ -1,0 +1,81 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+.city1{
+    background-image: url("img/page3/city1.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+.city2{
+    background-image: url("img/page3/city2.jpg");
+
+    height: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+}
+
+.city1, .city2 {
+    transition: transform 2s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(50%);
+}
+
+.city1:hover, .city2:hover {
+    filter: brightness(100%);
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 50px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.city1:hover .overlay, .city2:hover .overlay {
+    opacity: 1;
+}
+
+.overlay p:hover {
+    color: darkseagreen;
+    text-decoration: underline;
+}

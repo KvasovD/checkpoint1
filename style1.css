@@ -31,13 +31,31 @@ li a:hover {
     background-color: #04AA6D;
 }
 
-div {
-    margin: 10px 150px 10px 150px;
-    padding: 10px 150px 10px 150px;
-    text-align: justify;
+.column {
+    float: left;
+}
+
+.column.side {
+    width: 25%;
+}
+
+.column.middle {
+    width: 75%;
+}
+
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
 }
 
 p {
     text-indent: 50px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
